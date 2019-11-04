@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+
+    <title>Datepair.js &ndash; Demos and Documentation</title>
+    <meta name="description" content="A javascript plugin for intelligently selecting date and time ranges inspired by Google Calendar." />
+
+    <!-- jquery --->
+    <script src="jquery-3.4.1.js"></script>
+
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--- timepicker -->
+    <script src="timepicker/jquery.timepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="timepicker/jquery.timepicker.css">
+
+    <!--- datepicker --->
+    <script src="datepicker/js/bootstrap-datepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="datepicker/dist/css/bootstrap-datepicker.standalone.css"> 
+
+    <!--- datetimepicker  --->
+    <script src="datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="datetimepicker/css/bootstrap-datetimepicker.min.css">
+
+
+   <!-- <script src="dist/datepair.js"></script>
+    <script src="dist/jquery.datepair.js"></script>-->
+</head>
+
+<body>
+    <br>
+    <div class="container">
+    <section id="examples">
+        <article>
+            <div class="demo" style="width: 50%;">
+                <h2>EJEMPLO BÁSICO</h2>
+                <hr>
+
+                <!--<p id="basicExample">
+                    <input type="text" class="date start" />
+                    <input type="text" class="time start" /> 
+                </p>--->
+                <div class="row">
+                    <div class="col">
+                        <p>fecha = datepicker</p>
+                    <div><input type="text" class="form-control date"></div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                    <div class="col">
+                      <p>hora = datepicker</p>
+                    <div><input type="text" class="form-control time"></div>  
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                    <div class="col">
+                        <p>hora y fecha: datatimepicker</p>
+                        <div><input  type="text" class="form-control datetime" ></div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                $('.time').timepicker({
+                    'showDuration': true,
+                    'timeFormat': 'g:ia'
+                });
+
+                $('.date').datepicker({
+                    'format': 'm/d/yyyy',
+                    'autoclose': true
+                });
+
+                $(".datetime").datetimepicker({
+                    format: 'yyyy-mm-dd hh:ii'
+                });
+            </script>
+
+        </article>
+    </section>
+    </div>
+
+
+
+
+</body>
+</html>
